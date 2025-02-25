@@ -10,5 +10,5 @@
     - name: Restart Wildfly if url is not reachable
       condition: event.url_check.status == "down"
       action:
-        run_playbook:
-          name: playbooks/restart_wildfly.yml
+        run_job_template:
+          name: "Restart Wildfly"
