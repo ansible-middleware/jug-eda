@@ -12,3 +12,4 @@
       action:
         run_job_template:
           name: "Restart Wildfly"
+          organization: "Jug-Grenoble"
