@@ -10,5 +10,5 @@
       condition: event.journald.message is search("EDVIGE App is broken", ignorecase=false)
       action:
         run_job_template:
-          name: "Restart Wildfly"
+          name: "Flush Idle Db"
           organization: "Jug-Grenoble"
