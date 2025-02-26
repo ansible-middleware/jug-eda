@@ -1,5 +1,5 @@
 ---
-- name: Check webserver
+- name: Flush Db if idled connections are detected
   hosts: wildfly
   sources:
     - ansible.eda.journald:
