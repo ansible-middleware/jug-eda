@@ -1,6 +1,6 @@
 ---
 - name: Check webserver
-  hosts: all
+  hosts: wildfly
   sources:
     - ansible.eda.journald:
         match: ALL
@@ -9,7 +9,6 @@
     - name: Match all on journald
       condition: event.journald.message is search("EDVIGE App is broken", ignorecase=false)
       action:
-        run_playbook:
-          name: playbooks/broken.yml
-          extra_vars:
-            log_entry: "{{ event.journald.message }}"
+        run_job_template:
+          name: "Restart Wildfly"
+          organization: "Jug-Grenoble"
