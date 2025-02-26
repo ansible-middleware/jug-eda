@@ -11,5 +11,5 @@
       condition: event.url_check.status_code == 500
       action:
         run_job_template:
-          name: "Restart Wildfly"
+          name: "Flush Idle Db"
           organization: "Jug-Grenoble"
